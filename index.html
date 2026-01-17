@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ewan's Tools</title>
+    <title>Ewan Cameron</title>
     <style>
         :root {
             --primary: #2563eb;
@@ -127,6 +127,24 @@
             margin-left: 0.5rem;
         }
 
+        /* Tag color coding */
+        .tag-skill { background: #dbeafe; color: #1e40af; }
+        .tag-agent { background: #ede9fe; color: #5b21b6; }
+        .tag-python { background: #fef3c7; color: #92400e; }
+        .tag-ios { background: #fee2e2; color: #991b1b; }
+        .tag-pwa { background: #d1fae5; color: #065f46; }
+        .tag-cli { background: #e5e7eb; color: #374151; }
+        .tag-node { background: #dcfce7; color: #166534; }
+
+        /* Featured items */
+        .tool.featured {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin: 0 -0.75rem;
+        }
+
         footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -182,9 +200,22 @@
 </head>
 <body>
     <header>
-        <h1>Ewan's Tools</h1>
-        <p>HTML/JavaScript tools and apps, mostly built with AI assistance</p>
+        <h1>Ewan Cameron</h1>
+        <p>AI agents, automation tools, and insights from building learning systems</p>
     </header>
+
+    <nav style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.85rem;">
+        <a href="#insights" style="padding: 0.35rem 0.75rem; background: var(--primary); color: white; border-radius: 4px; text-decoration: none;">Insights</a>
+        <a href="#leadership" style="padding: 0.35rem 0.75rem; background: var(--border); color: var(--text); border-radius: 4px; text-decoration: none;">Leadership</a>
+        <a href="#ai-dev" style="padding: 0.35rem 0.75rem; background: var(--border); color: var(--text); border-radius: 4px; text-decoration: none;">AI & Dev</a>
+        <a href="#research" style="padding: 0.35rem 0.75rem; background: var(--border); color: var(--text); border-radius: 4px; text-decoration: none;">Research</a>
+        <a href="#home" style="padding: 0.35rem 0.75rem; background: var(--border); color: var(--text); border-radius: 4px; text-decoration: none;">Home</a>
+        <a href="#lifestyle" style="padding: 0.35rem 0.75rem; background: var(--border); color: var(--text); border-radius: 4px; text-decoration: none;">Lifestyle</a>
+    </nav>
+
+    <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
+        <p><em>[Intro placeholder — a few sentences about who I am and what unifies this collection]</em></p>
+    </div>
 
     <div class="recent">
         <h2>Recently Added</h2>
@@ -212,18 +243,18 @@
         </ul>
     </div>
 
-    <section>
+    <section id="research">
         <h2>Business Intelligence & Research</h2>
         <div class="tools">
-            <div class="tool" id="companies-house">
+            <div class="tool featured" id="companies-house">
                 <a href="https://github.com/Camekazi/.claude">Companies House Research CLI</a>
                 <span class="desc">Research UK companies, directors, and ownership structures via CLI. Map power dynamics, identify beneficial owners, and conduct due diligence</span>
-                <span class="tag">Python CLI</span>
+                <span class="tag tag-python">Python CLI</span>
             </div>
-            <div class="tool" id="ona">
+            <div class="tool featured" id="ona">
                 <a href="https://github.com/Camekazi/.claude">Organizational Network Analysis</a>
                 <span class="desc">Map informal organizational structures and influence patterns using Rob Cross methodology. Primitives for nodes, links, metrics, rendering, and deployment</span>
-                <span class="tag">Claude Code Skill</span>
+                <span class="tag tag-skill">Claude Code Skill</span>
             </div>
         </div>
         <div style="margin-top: 0.75rem; padding: 0.75rem; background: var(--bg); border-radius: 6px; font-size: 0.85rem; color: var(--text-muted);">
@@ -245,24 +276,19 @@
             <div class="tool">
                 <a href="#">1-Pager Designed Checklists</a>
                 <span class="desc">Structured checklists with design sensibility — visual information architecture for complex processes</span>
-                <span class="tag">Design Artifacts</span>
+                <span class="tag">Design</span>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Health & Fitness</h2>
+    <section id="lifestyle">
+        <h2>Lifestyle</h2>
         <div class="tools">
             <div class="tool">
                 <a href="https://camekazi.github.io/ewans-exercises/">Ewan's Exercises</a>
                 <span class="desc">Strength training workout tracker PWA with structured programs</span>
+                <span class="tag tag-pwa">PWA</span>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Sustainability</h2>
-        <div class="tools">
             <div class="tool">
                 <a href="https://camekazi.github.io/cableloop/">CableLoop</a>
                 <span class="desc">Cable recycling finder and community exchange platform</span>
@@ -272,70 +298,70 @@
 
     <!-- Personal ONA archived - private at scottish-scaleup-ona.netlify.app -->
 
-    <section>
+    <section id="home">
         <h2>Family & Automation</h2>
         <div class="tools">
             <div class="tool">
                 <a href="https://github.com/Camekazi/joppa-bridge">Joppa Bridge</a>
                 <span class="desc">Smart home bridge with Alexa voice control for audio zones and lighting</span>
-                <span class="tag">Python</span>
+                <span class="tag tag-python">Python</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi">Kids Development Calendar</a>
                 <span class="desc">Weekly developmental milestone calendar entries for children with evidence-based activities from NHS/CDC/WHO guidelines and "Why now" explanations grounded in developmental psychology</span>
-                <span class="tag">Claude Code Skill</span>
+                <span class="tag tag-skill">Claude Code Skill</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi/meal-bot">WhatsApp Meal Bot</a>
                 <span class="desc">Family meal planning via WhatsApp — polls household for preferences, generates meal plans, creates shopping lists</span>
-                <span class="tag">Node.js</span>
+                <span class="tag tag-node">Node.js</span>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="leadership">
         <h2>Leadership & Coaching</h2>
         <div class="tools">
             <div class="tool" id="missing-lenses">
                 <a href="https://github.com/Camekazi/.claude">Missing Lenses Analysis</a>
                 <span class="desc">Systematic framework gap detection for complex decisions — surfaces blind spots by checking which analytical lenses you haven't applied</span>
-                <span class="tag">Claude Code Skill</span>
+                <span class="tag tag-skill">Claude Code Skill</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi/.claude">Immunity to Change Coach</a>
                 <span class="desc">Guided coaching through Kegan & Lahey's four-column methodology — uncovers hidden commitments and big assumptions blocking change</span>
-                <span class="tag">Claude Code Agent</span>
+                <span class="tag tag-agent">Claude Code Agent</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi/.claude">Organizational Coherence Diagnostic</a>
                 <span class="desc">Diagnose organizational dysfunction using Claydon's frameworks — Run/Serve/Change triad, Confusion Tax, 4D Power Map</span>
-                <span class="tag">Claude Code Agent</span>
+                <span class="tag tag-agent">Claude Code Agent</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi/.claude">Perspective Challenger</a>
                 <span class="desc">Cognitive dissonance navigator — surfaces blind spots using Street Epistemology, Deep Canvassing, and non-WEIRD perspective challenges</span>
-                <span class="tag">Claude Code Agent</span>
+                <span class="tag tag-agent">Claude Code Agent</span>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="ai-dev">
         <h2>AI & Development</h2>
         <div class="tools">
             <div class="tool">
                 <a href="https://github.com/Camekazi/ReadingCompanion">ReadingCompanion</a>
                 <span class="desc">iOS app with Claude for passage explanations and spoiler-free character queries</span>
-                <span class="tag">iOS</span>
+                <span class="tag tag-ios">iOS</span>
             </div>
-            <div class="tool" id="agent-improvement">
+            <div class="tool featured" id="agent-improvement">
                 <a href="https://github.com/Camekazi/.claude">Agent Self-Improvement System</a>
                 <span class="desc">AI agents that propose and track their own improvements — writes proposals to staging, humans approve via review workflow</span>
-                <span class="tag">Claude Code</span>
+                <span class="tag tag-skill">Claude Code</span>
             </div>
-            <div class="tool">
+            <div class="tool featured">
                 <a href="https://github.com/Camekazi/.claude">Claude Code Learning System</a>
                 <span class="desc">A compounding learning system built on one question: <em>"Did the system learn, or did I just get through today?"</em></span>
-                <span class="tag">CLI</span>
+                <span class="tag tag-cli">CLI</span>
             </div>
         </div>
         <div class="learning-system-details" style="margin-top: 1rem; padding: 1rem; background: var(--bg); border-radius: 6px; font-size: 0.9rem;">
@@ -355,23 +381,33 @@
 
     <section id="insights">
         <h2>Insights from Using AI Agents</h2>
-        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Patterns from building 68+ skills and 12 agents with Claude Code</p>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Patterns from building 68+ skills and 12 agents with Claude Code</p>
+
+        <h3 style="font-size: 0.9rem; color: var(--primary); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">The Learning Loop</h3>
         <ol style="list-style: none; counter-reset: insight;">
             <li class="insight"><strong>Failures are gold</strong> — Document what failed, not just what worked. The ❌ field is the most valuable part of any learning.</li>
             <li class="insight"><strong>5+ occurrences, then operationalize</strong> — Wait for patterns to prove themselves before building infrastructure around them.</li>
             <li class="insight"><strong>Propose, don't auto-apply</strong> — AI should suggest changes; humans approve. Prevents drift and maintains trust.</li>
             <li class="insight"><strong>Grep when needed, delete what's stale</strong> — One searchable file beats elaborate tracking systems.</li>
+        </ol>
+
+        <h3 style="font-size: 0.9rem; color: var(--primary); margin: 1.5rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Agent Design</h3>
+        <ol style="list-style: none; counter-reset: insight;" start="5">
             <li class="insight"><strong>Match complexity to artifact</strong> — Simple → Command. Complicated → Skill. Complex → Agent. Wrong artifact type = wasted effort.</li>
             <li class="insight"><strong>Extend, don't create</strong> — Adding 200 lines to existing code beats 500 lines standalone. Check what exists first.</li>
             <li class="insight"><strong>Skill names should be grep-able</strong> — "subtext-analysis" beats "hermeneutic-observation". Name for discovery.</li>
+            <li class="insight"><strong>Features are prompts, tools are primitives</strong> — Define outcomes in natural language. Tools provide capability, not behavior.</li>
+            <li class="insight"><strong>Agent-user parity</strong> — Whatever the user can do, the agent can do. Whatever the user can see, the agent can see.</li>
+            <li class="insight"><strong>Don't LLM what regex can do</strong> — Use deterministic handling for structured inputs. Save the LLM for genuinely ambiguous cases.</li>
+        </ol>
+
+        <h3 style="font-size: 0.9rem; color: var(--primary); margin: 1.5rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Working with AI</h3>
+        <ol style="list-style: none; counter-reset: insight;" start="11">
             <li class="insight"><strong>Brainstorm before simplifying</strong> — Present 5-7 options before rewriting. Let humans shape direction.</li>
             <li class="insight"><strong>URL-driven task initiation</strong> — Concrete URLs beat abstract descriptions. "Install X from [link]" works; "add that library" doesn't.</li>
             <li class="insight"><strong>After 3 failed fixes, disable and move on</strong> — Know when to stop debugging. Revisit with fresh context later.</li>
             <li class="insight"><strong>Inject domain context into prompts</strong> — "DO NOT suggest X for these items" prevents obvious mistakes. LLMs need explicit exclusions.</li>
             <li class="insight"><strong>Check native before customizing</strong> — Query the changelog first. The feature you're building might already exist.</li>
-            <li class="insight"><strong>Features are prompts, tools are primitives</strong> — Define outcomes in natural language. Tools provide capability, not behavior. <code>read_file</code> not <code>analyze_document</code>.</li>
-            <li class="insight"><strong>Agent-user parity</strong> — Whatever the user can do, the agent can do. Whatever the user can see, the agent can see. No hidden state.</li>
-            <li class="insight"><strong>Don't LLM what regex can do</strong> — Use deterministic handling for structured inputs. Save the LLM for genuinely ambiguous cases.</li>
         </ol>
         <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>Inspired by:</strong></p>
