@@ -162,19 +162,42 @@
         <h2>Recently Added</h2>
         <ul>
             <li>
-                <a href="https://github.com/Camekazi/joppa-bridge">Joppa Bridge</a>
+                <a href="#companies-house">Companies House Research CLI</a>
                 <span class="date">Jan 2026</span>
             </li>
             <li>
-                <a href="https://github.com/Camekazi">Kids Development Calendar</a>
+                <a href="#agent-improvement">Agent Self-Improvement System</a>
                 <span class="date">Jan 2026</span>
             </li>
             <li>
-                <a href="https://camekazi.github.io/recipe-timer/guideflow.html">GuideFlow</a>
+                <a href="#missing-lenses">Missing Lenses Analysis</a>
+                <span class="date">Jan 2026</span>
+            </li>
+            <li>
+                <a href="https://github.com/Camekazi/meal-bot">WhatsApp Meal Bot</a>
                 <span class="date">Jan 2026</span>
             </li>
         </ul>
     </div>
+
+    <section>
+        <h2>Business Intelligence & Research</h2>
+        <div class="tools">
+            <div class="tool" id="companies-house">
+                <a href="https://github.com/Camekazi/.claude">Companies House Research CLI</a>
+                <span class="desc">Research UK companies, directors, and ownership structures via CLI. Map power dynamics, identify beneficial owners, and conduct due diligence</span>
+                <span class="tag">Python CLI</span>
+            </div>
+            <div class="tool" id="ona">
+                <a href="https://github.com/Camekazi/.claude">Organizational Network Analysis</a>
+                <span class="desc">Map informal organizational structures and influence patterns using Rob Cross methodology. Primitives for nodes, links, metrics, rendering, and deployment</span>
+                <span class="tag">Claude Code Skill</span>
+            </div>
+        </div>
+        <div style="margin-top: 0.75rem; padding: 0.75rem; background: var(--bg); border-radius: 6px; font-size: 0.85rem; color: var(--text-muted);">
+            <strong>External validation:</strong> The Companies House power research received positive feedback from senior executives for surfacing ownership structures and directorship networks that informed strategic decisions.
+        </div>
+    </section>
 
     <section>
         <h2>Productivity & Guides</h2>
@@ -186,6 +209,11 @@
             <div class="tool">
                 <a href="https://camekazi.github.io/recipe-timer/">Recipe Timer</a>
                 <span class="desc">Visual cooking timer with step tracking and elapsed time</span>
+            </div>
+            <div class="tool">
+                <a href="#">1-Pager Designed Checklists</a>
+                <span class="desc">Structured checklists with design sensibility — visual information architecture for complex processes</span>
+                <span class="tag">Design Artifacts</span>
             </div>
         </div>
     </section>
@@ -230,6 +258,11 @@
                 <span class="desc">Automated grocery tracking and AI meal planning from supermarket orders and weekly subscription meals</span>
                 <span class="tag">Python</span>
             </div>
+            <div class="tool">
+                <a href="https://github.com/Camekazi/meal-bot">WhatsApp Meal Bot</a>
+                <span class="desc">Family meal planning via WhatsApp — polls household for preferences, generates meal plans, creates shopping lists</span>
+                <span class="tag">Node.js</span>
+            </div>
         </div>
     </section>
 
@@ -240,6 +273,16 @@
                 <a href="https://github.com/Camekazi/ReadingCompanion">ReadingCompanion</a>
                 <span class="desc">iOS app with Claude for passage explanations and spoiler-free character queries</span>
                 <span class="tag">iOS</span>
+            </div>
+            <div class="tool" id="missing-lenses">
+                <a href="https://github.com/Camekazi/.claude">Missing Lenses Analysis</a>
+                <span class="desc">Systematic framework gap detection for complex decisions — surfaces blind spots by checking which analytical lenses you haven't applied</span>
+                <span class="tag">Claude Code Skill</span>
+            </div>
+            <div class="tool" id="agent-improvement">
+                <a href="https://github.com/Camekazi/.claude">Agent Self-Improvement System</a>
+                <span class="desc">AI agents that propose and track their own improvements — writes proposals to staging, humans approve via review workflow</span>
+                <span class="tag">Claude Code</span>
             </div>
             <div class="tool">
                 <a href="https://github.com/Camekazi/.claude">Claude Code Learning System</a>
@@ -253,6 +296,7 @@
             <ul style="margin-left: 1.25rem; color: var(--text-muted);">
                 <li><strong>Friction detection</strong> — <code>/hookify</code> analyzes conversations for corrections and frustration, then proposes prevention rules automatically</li>
                 <li><strong>Pattern promotion</strong> — Observations that recur 3+ times get promoted to rules, skills, or agents</li>
+                <li><strong>Agent self-improvement</strong> — Domain agents propose their own improvements based on session patterns; humans approve via <code>/review-improvements</code></li>
                 <li><strong>Coached-thinker mode</strong> — Nudges toward action over analysis paralysis; asks "What's the smallest step?" not "Have you considered..."</li>
                 <li><strong>Domain agents</strong> — Immunity to Change coaching (Kegan), systems thinking (Meadows), organizational sensemaking (Cynefin + Estuarine)</li>
                 <li><strong>68+ skills</strong> — JTBD, ONA network analysis, Wardley Maps, financial modeling, stakeholder analysis, and more</li>
