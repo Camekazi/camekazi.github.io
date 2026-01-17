@@ -139,6 +139,34 @@
             color: var(--primary);
         }
 
+        .insight {
+            counter-increment: insight;
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .insight:last-child {
+            border-bottom: none;
+        }
+
+        .insight::before {
+            content: counter(insight);
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1.75rem;
+            height: 1.75rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
         @media (max-width: 600px) {
             .tool {
                 flex-direction: column;
@@ -161,6 +189,10 @@
     <div class="recent">
         <h2>Recently Added</h2>
         <ul>
+            <li>
+                <a href="#insights">Insights from Using AI Agents</a>
+                <span class="date">Jan 2026</span>
+            </li>
             <li>
                 <a href="#companies-house">Companies House Research CLI</a>
                 <span class="date">Jan 2026</span>
@@ -303,6 +335,25 @@
             </ul>
             <p style="margin-top: 0.75rem; color: var(--text-muted);">Two files. Simple format. Grep to search. Built for individuals and teams who want to systematize expertise instead of rediscovering it.</p>
         </div>
+    </section>
+
+    <section id="insights">
+        <h2>Insights from Using AI Agents</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Patterns from building 68+ skills and 12 agents with Claude Code</p>
+        <ol style="list-style: none; counter-reset: insight;">
+            <li class="insight"><strong>Failures are gold</strong> — Document what failed, not just what worked. The ❌ field is the most valuable part of any learning.</li>
+            <li class="insight"><strong>5+ occurrences, then operationalize</strong> — Wait for patterns to prove themselves before building infrastructure around them.</li>
+            <li class="insight"><strong>Propose, don't auto-apply</strong> — AI should suggest changes; humans approve. Prevents drift and maintains trust.</li>
+            <li class="insight"><strong>Grep when needed, delete what's stale</strong> — One searchable file beats elaborate tracking systems.</li>
+            <li class="insight"><strong>Match complexity to artifact</strong> — Simple → Command. Complicated → Skill. Complex → Agent. Wrong artifact type = wasted effort.</li>
+            <li class="insight"><strong>Extend, don't create</strong> — Adding 200 lines to existing code beats 500 lines standalone. Check what exists first.</li>
+            <li class="insight"><strong>Skill names should be grep-able</strong> — "subtext-analysis" beats "hermeneutic-observation". Name for discovery.</li>
+            <li class="insight"><strong>Brainstorm before simplifying</strong> — Present 5-7 options before rewriting. Let humans shape direction.</li>
+            <li class="insight"><strong>URL-driven task initiation</strong> — Concrete URLs beat abstract descriptions. "Install X from [link]" works; "add that library" doesn't.</li>
+            <li class="insight"><strong>After 3 failed fixes, disable and move on</strong> — Know when to stop debugging. Revisit with fresh context later.</li>
+            <li class="insight"><strong>Inject domain context into prompts</strong> — "DO NOT suggest X for these items" prevents obvious mistakes. LLMs need explicit exclusions.</li>
+            <li class="insight"><strong>Check native before customizing</strong> — Query the changelog first. The feature you're building might already exist.</li>
+        </ol>
     </section>
 
     <footer>
